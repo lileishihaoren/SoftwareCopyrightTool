@@ -5,7 +5,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
-    Title="软件著作权代码生成器"
     Width="800"
     Height="450"
     AllowDrop="True"
@@ -13,6 +12,14 @@
     <pu:WindowX.DataContext>
         <Binding Path="Main" Source="{StaticResource Locator}" />
     </pu:WindowX.DataContext>
+    <pu:WindowXCaption.Header>
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+            <Label Width="5" />
+            <Image Width="24" Height="24" RenderOptions.BitmapScalingMode="HighQuality" Source="../Res/soft.ico" />
+            <Label Width="5" />
+            <Label Content="软件著作权代码生成器" />
+        </StackPanel>
+    </pu:WindowXCaption.Header>
     <DockPanel Margin="5">
         <DockPanel Margin="5" DockPanel.Dock="Top">
             <Label Margin="3">扫描文件夹</Label>

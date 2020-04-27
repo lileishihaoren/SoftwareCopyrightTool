@@ -37,6 +37,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Res\soft.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
@@ -123,6 +126,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Res\soft.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.6.1.1\build\Fody.targets" Condition="Exists('..\packages\Fody.6.1.1\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
