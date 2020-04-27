@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareCopyrightTool", "SoftwareCopyrightTool\SoftwareCopyrightTool.csproj", "{D08E08BC-D5B3-464F-B7BF-A18D6D23F875}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D08E08BC-D5B3-464F-B7BF-A18D6D23F875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D08E08BC-D5B3-464F-B7BF-A18D6D23F875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D08E08BC-D5B3-464F-B7BF-A18D6D23F875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D08E08BC-D5B3-464F-B7BF-A18D6D23F875}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FE95C66-994A-4C8D-8C3C-B129DE6052F6}
+	EndGlobalSection
+EndGlobal

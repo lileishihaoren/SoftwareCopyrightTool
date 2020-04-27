@@ -1,0 +1,36 @@
+﻿<pu:WindowX
+    x:Class="SoftwareCopyrightTool.View.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
+    Title="软件著作权代码生成器"
+    Width="800"
+    Height="450"
+    AllowDrop="True"
+    mc:Ignorable="d">
+    <pu:WindowX.DataContext>
+        <Binding Path="Main" Source="{StaticResource Locator}" />
+    </pu:WindowX.DataContext>
+    <DockPanel Margin="5">
+        <DockPanel Margin="5" DockPanel.Dock="Top">
+            <Label Margin="3">扫描文件夹</Label>
+            <Button
+                Margin="3"
+                Padding="5"
+                Command="{Binding CmdGen}"
+                Content="生成"
+                DockPanel.Dock="Right"
+                IsEnabled="{Binding Main.IsEnable}" />
+            <TextBox
+                Margin="3"
+                pu:TextBoxHelper.Watermark="请拖入文件夹，或输入文件夹地址"
+                AllowDrop="True"
+                PreviewDragOver="UIElement_OnPreviewDragOver"
+                PreviewDrop="UIElement_OnPreviewDrop"
+                Text="{Binding Main.DirPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        </DockPanel>
+        <TextBox Margin="5" Text="{Binding Main.FullText, Mode=TwoWay}" VerticalScrollBarVisibility="Auto" />
+    </DockPanel>
+</pu:WindowX>
