@@ -40,8 +40,17 @@ namespace SoftwareCopyrightTool.ViewModel
 
                 var fullText = string.Join("\r\n", lines);
                 Main.FullText = fullText;
-                Clipboard.SetText(fullText);
-                MessageBoxX.Show("Copy to clipboard");
+                try
+                {
+                    Clipboard.SetText(fullText);
+                    MessageBoxX.Show("Copy to clipboard");
+                }
+                catch (Exception e)
+                {
+                    MessageBoxX.Show("Copy to clipboard failed.");
+                    File.WriteAllText($"{DateTime.Now:yyyyMMddHHmmss}.txt", fullText);
+                }
+                
 
             })); }
         }
