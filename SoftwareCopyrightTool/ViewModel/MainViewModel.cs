@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Shapes;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
 using Panuon.UI.Silver;
@@ -58,7 +59,18 @@ namespace SoftwareCopyrightTool.ViewModel
         private List<string> ProcessOneFile(FileInfo fileInfo)
         {
             List<string> retList = new List<string>();
-            string[] content = File.ReadAllLines(fileInfo.FullName);
+            //List<string> content = new List<string>();
+            //using (var reader = new StreamReader(fileInfo.FullName, true))
+            //{
+            //    string line;
+            //    while ((line = reader.ReadLine()) != null)
+            //    {
+            //        content.Add(line);
+            //    }
+            //}
+
+            string[] content = File.ReadAllLines(fileInfo.FullName,Encoding.Default);
+
 
             bool continueRemark = false;
             foreach (var line in content)
